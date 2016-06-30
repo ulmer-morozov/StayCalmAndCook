@@ -189,15 +189,15 @@
     }
 
         .cookControllerPage .controls .btn.player-btn.back {
-            background-image: url(/assets/icons/icon_back.svg);
+            background-image: url(../icons/icon_back.svg);
         }
 
         .cookControllerPage .controls .btn.player-btn.repeat {
-            background-image: url(/assets/icons/icon_repeat.svg);
+            background-image: url(../icons/icon_repeat.svg);
         }
 
         .cookControllerPage .controls .btn.player-btn.next {
-            background-image: url(/assets/icons/icon_next.svg);
+            background-image: url(../icons/icon_next.svg);
         }
 
 /*Information*/
