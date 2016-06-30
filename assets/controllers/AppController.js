@@ -11,7 +11,6 @@ var Foodstrap;
         }
         AppController.$inject = ["$rootScope"];
         return AppController;
-    })();
+    }());
     Foodstrap.AppController = AppController;
 })(Foodstrap || (Foodstrap = {}));
-//# sourceMappingURL=AppController.js.map

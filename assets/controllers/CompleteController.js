@@ -12,7 +12,6 @@ var Foodstrap;
             "$timeout"
         ];
         return CompleteController;
-    })();
+    }());
     Foodstrap.CompleteController = CompleteController;
 })(Foodstrap || (Foodstrap = {}));
-//# sourceMappingURL=CompleteController.js.map

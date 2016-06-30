@@ -12,7 +12,6 @@ var Foodstrap;
             this.$debounce = $debounce;
             this.startedParamName = "started";
             this.offsetParamName = "offset";
-            //Handlers
             this.offsetChangeHandler = function (newOffsetValue) {
                 _this.$location.replace();
                 _this.$location.search("offset", newOffsetValue);
@@ -24,7 +23,6 @@ var Foodstrap;
                 var newScroll = Math.floor(normalizedScroll * maxScroll);
                 timelineElement.scrollLeft(newScroll);
             };
-            //Help methods
             this.populateAllSteps = function () {
                 var tasks = _this.$scope.algorithm.tasks;
                 var allSteps = [];
@@ -40,7 +38,6 @@ var Foodstrap;
             };
             this.updateCookingStarTimeFromLocation = function () {
                 var currentTime = parseInt(_this.$routeParams[_this.startedParamName]);
-                //currentTime = new Date().getTime();//temp
                 if (isNaN(currentTime)) {
                     currentTime = new Date().getTime();
                     _this.$location.search(_this.startedParamName, currentTime);
@@ -49,7 +46,6 @@ var Foodstrap;
             };
             this.updateCookingTimeOffsetFromLocation = function () {
                 var currentOffset = parseInt(_this.$routeParams[_this.offsetParamName]);
-                //currentOffset = 5694185;//temp
                 if (isNaN(currentOffset)) {
                     currentOffset = 0;
                     _this.$location.search(_this.offsetParamName, currentOffset);
@@ -115,7 +111,6 @@ var Foodstrap;
                     }
                     time = _this.$scope.totalTime;
                 }
-                //
                 _this.$scope.currentTime = time;
                 _this.refreshTimeLine(_this.$scope.currentTime);
             };
@@ -130,10 +125,8 @@ var Foodstrap;
                     var step = allSteps[i];
                     if (step.endTime < newTime)
                         continue;
-                    //
                     if (step.startTime > newTime)
                         break;
-                    //
                     currentStep = step;
                     previousStep = i > 0 ? allSteps[i - 1] : undefined;
                     nextStep = i + 1 < allSteps.length ? allSteps[i + 1] : undefined;
@@ -174,7 +167,6 @@ var Foodstrap;
             this.formatLikeTimeSpan = function (totalMiliseconds) {
                 if (isNaN(totalMiliseconds))
                     return;
-                //
                 var msInSec = 1000;
                 var msInMin = msInSec * 60;
                 var msInHour = msInMin * 60;
@@ -186,20 +178,16 @@ var Foodstrap;
                 var result = "";
                 if (hours != 0)
                     result += hours + " \u0447 ";
-                //
                 if (minutes != 0)
                     result += minutes + " \u043C\u0438\u043D ";
-                //
                 if (seconds != 0)
                     result += seconds + " \u0441 ";
-                //
                 result = result.trim();
                 return result;
             };
             this.getVideoUrlHandler = function (step) {
                 if (step == undefined)
                     return;
-                //
                 var url = 'url(/assets/videos/' + step.video + ')';
                 return url;
             };
@@ -220,8 +208,6 @@ var Foodstrap;
                 _this.$location.path("/Complete");
             };
             var ctrl = this;
-            //ctor
-            //initial data
             $scope.k = 15 / (60 * 1000);
             $scope.progress = 10;
             $scope.algorithm = {
@@ -355,7 +341,6 @@ var Foodstrap;
                 ]
             };
             $scope.isCompleted = false;
-            //
             function getMinStartTime(objects) {
                 var minStartTime = Number.MAX_VALUE;
                 angular.forEach(objects, function (object) {
@@ -402,13 +387,11 @@ var Foodstrap;
                 $timeout(function () {
                     ctrl.updateCurrentTime();
                     ctrl.refreshTimeLine($scope.currentTime);
-                    //addWatchers
                     $scope.$watch("offset", ctrl.offsetChangeHandler);
                     $scope.$watch("currentTime", ctrl.currentTimeChangeHandler);
                     $scope.$watch("currentStep", $debounce(ctrl.currentStepChange, 3000, true));
-                }); //tmp               
+                });
             }
-            //Инициализируем
             $scope.$on('PROGRESS', function ($event, progress) {
                 console.log(progress);
                 $event.stopPropagation();
@@ -442,7 +425,6 @@ var Foodstrap;
             "debounce"
         ];
         return CookController;
-    })();
+    }());
     Foodstrap.CookController = CookController;
 })(Foodstrap || (Foodstrap = {}));
-//# sourceMappingURL=CookController.js.map

@@ -7,12 +7,9 @@ var Foodstrap;
             this.$routeParams = $routeParams;
             this.$location = $location;
             this.$interval = $interval;
-            //ctor
-            //states
             var presentation = $scope.presentation = "presentation";
             var information = $scope.information = "information";
             $scope.state = presentation;
-            //data
             $scope.product = {
                 title: "Лёгкий суп\nиз лесных грибов",
                 cooking: {
@@ -35,12 +32,9 @@ var Foodstrap;
                     { title: "Масло", fullTitle: "Растительное масло", amount: 2, icon: "/Images/oil.png", description: "Подсолнечное, оливковое или льняное" }
                 ]
             };
-            //Helpers
             function updateStyle(ingridient) {
-                //ingridient.transformStyle = "scale(" + ingridient.scale + ") rotate(" + ingridient.angle + "deg) translate(" + ingridient.radius + "pt) rotate(-" + ingridient.angle + "deg)";
                 ingridient.transformStyle = "rotate3d(0,0,1," + ingridient.angle + "deg) translate3d(" + ingridient.radius + "pt,0,0) rotate3d(0,0,1, -" + ingridient.angle + "deg)";
             }
-            //watch state
             $scope.$watch("state", function (newState) {
                 var ingridient, i;
                 var step = 360 / $scope.product.ingridients.length;
@@ -99,7 +93,6 @@ var Foodstrap;
                     var initialRadius = 0;
                     var targetAngle = Math.round(i * step);
                     var targetRadius = 100;
-                    //
                     ingridient.radius = initialRadius + (targetRadius - initialRadius) * progress;
                     ingridient.angle = initialAngle + (targetAngle - initialAngle) * progress;
                     ingridient.scale = 0.6 + 0.4 * Math.pow(progress, 2);
@@ -113,10 +106,8 @@ var Foodstrap;
             function initialize() {
                 showIngridientsByProgress($scope.ingridientsShowPreviousProgress);
             }
-            //Инициализируем
             initialize();
         }
-        //DI
         FoodController.$inject = [
             "$scope",
             "$routeParams",
@@ -124,7 +115,6 @@ var Foodstrap;
             "$interval"
         ];
         return FoodController;
-    })();
+    }());
     Foodstrap.FoodController = FoodController;
 })(Foodstrap || (Foodstrap = {}));
-//# sourceMappingURL=FoodController.js.map

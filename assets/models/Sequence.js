@@ -12,7 +12,6 @@ var Foodstrap;
             return sequence;
         };
         return Sequence;
-    })();
+    }());
     Foodstrap.Sequence = Sequence;
 })(Foodstrap || (Foodstrap = {}));
-//# sourceMappingURL=Sequence.js.map
