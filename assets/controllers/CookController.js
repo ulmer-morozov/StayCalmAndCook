@@ -290,7 +290,7 @@ var Foodstrap;
                         steps: [
                             {
                                 action: "Аккуратно залейте в кастрюлю воду",
-                                video: "fillWaterIntoPan.gif",
+                                video: "fillWaterInToPan.gif",
                                 audio: "fillWaterIntoPan.m4a",
                                 duration: this.minutes2Miliseconds(3)
                             },
