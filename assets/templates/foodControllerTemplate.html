@@ -1,0 +1,73 @@
+﻿<div>
+    <div ng-class="[state]" class="food">
+        <div class="satelites">
+            <!--ingridients-->
+            <div ng-repeat="ingridient in product.ingridients"
+                 ng-click="selectIngridient(ingridient)"
+                 ng-mouseover="selectIngridient(ingridient)"
+                 ng-mouseleave="selectIngridient()"
+                 ng-style="{'transform':ingridient.transformStyle}"
+                 ng-class="{active: ingridient.active}"
+                 class="satellite-food">
+                <div ng-class="{active:ingridient.active}" class="ingridient-content">
+                    <div class="image" style="background-image: url({{ingridient.icon}})"></div>
+                </div>
+                <!--<img ng-src="{{ingridient.icon}}" alt="{{ingridient.fullTitle}}" />-->
+            </div>
+        </div>
+        <!--main-->
+        <div ng-click="toggleState()" ng-style="{'transform':productTransformStyle}" class="main-food">
+            <div class="main-food-content">
+                <div class="ingridientInfo" ng-class="{active:currentIngridient}">
+                    <div class="title">{{currentIngridient.fullTitle}}</div>
+                    <hr />
+                    <div class="description">{{currentIngridient.description}}</div>
+                </div>
+                <div class="image" style="background-image: url(/Images/soup.png)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="information-container" ng-class="[state]" ng-style="{'transform':informationTransformStyle}">
+        <div class="information-content row">
+            <div class="col-xs-11 col-lg-7">
+                <h1>{{product.title}}</h1>
+                <div class="visual-information row">
+                    <div class="col-xs-6">
+                        <div class="food-bar"><span class="micons difficulty"></span> <span ng-show="product.cooking.difficulty==3">Средняя</span></div>
+                        <div class="food-bar">
+                            <span class="micons time"></span> {{product.cooking.time.minutes}} минут
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="food-bar">
+                            <span class="micons steps"></span> {{product.cooking.steps}} шагов
+                        </div>
+                        <div class="food-bar">
+                            <span class="micons portions"></span> {{product.cooking.portions}} порции
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="ingridient-title">Ингредиенты</h4>
+                <div ng-repeat="ingridient in product.ingridients" class="ingridient-description">
+                    <span>
+                        {{ingridient.fullTitle}} -
+                        <span ng-show="ingridient.weight">{{ingridient.weight}} граммов</span>
+                        <span ng-show="ingridient.amount">{{ingridient.amount}} стол. ложек</span>
+                        <span ng-show="ingridient.volume">{{ingridient.volume}} литров</span>
+                    </span>
+                </div>
+                <a href="#/Cook" class="btn btn-default btn-lg btn-block">Приготовить</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="super-slogan" ng-class="[state]">Хочешь<br/>легкого<br/>супчика<br/>из лесных<br/>грибов?</div>
+    <!--<div ng-class="[state]" class="slogans">
+        <div class="slogan slogan1">Хочешь<br />супчик?</div>
+        <div class="slogan slogan2">Сделай!</div>
+        <div class="slogan slogan3">Не знаешь<br />как?</div>
+        <div class="slogan slogan4">Жми сюда!</div>
+    </div>-->
+</div>

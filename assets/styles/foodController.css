@@ -1,0 +1,291 @@
+﻿.main-food {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 140pt;
+    height: 140pt;
+    margin-left: -70pt;
+    margin-top: -70pt;
+    border-radius: 70pt;
+    -webkit-user-drag: none;
+    transition: all 0.6s ease-out;
+    transform-style: preserve-3d;
+}
+
+    .main-food .image {
+        /*background-color: red;*/
+        /*border-radius: 50%;*/
+        /*background-blend-mode: screen;*/
+        /*-webkit-filter: grayscale(1);*/
+        /*filter: grayscale(1);*/
+    }
+
+.satellite-food {
+    position: fixed;
+    left: calc(50% - 140pt);
+    top: 50%;
+    width: 50pt;
+    height: 50pt;
+    margin-top: -25pt;
+    margin-left: -25pt;
+    border-radius: 25pt;
+    -webkit-user-drag: none;
+    transition: all 1s ease-out;
+    transform-style: preserve-3d;
+    background-color: #0e0e0e;
+    opacity: 0;
+}
+
+    .satellite-food .ingridient-content {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        padding: 6pt;
+        border: 1pt solid transparent;
+        transition: border 0.6s ease-out;
+    }
+
+        .satellite-food .ingridient-content.active {
+            border: 1pt solid white;
+        }
+
+.main-food-content {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    padding: 6pt;
+}
+
+.satellite-food .ingridient-content .image, .main-food .main-food-content .image {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ingridientInfo {
+    position: absolute;
+    width: calc(100% - 12pt);
+    height: calc(100% - 12pt);
+    border-radius: calc(50%);
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /*font-weight: 300;*/
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+    .ingridientInfo.active {
+        opacity: 1;
+    }
+
+    .ingridientInfo .title {
+        width: 128pt;
+        height: 64pt;
+        padding: 4pt;
+        vertical-align: bottom;
+        white-space: pre-wrap;
+        display: table-cell;
+        font-weight: 700;
+    }
+
+    .ingridientInfo hr {
+        width: 60%;
+        margin: 0 0 0 20%;
+        padding: 0;
+    }
+
+    .ingridientInfo .description {
+        display: inline-block;
+        height: 50%;
+        width: 100%;
+        font-size: 8pt;
+        padding: 4pt;
+    }
+
+.main-food, .satellite-food {
+}
+
+
+.food.presentation .main-food, .food.presentation .satellite-food {
+    /*left: 50%;*/
+    /*border-color: transparent;*/
+}
+
+.food.presentation .satellite-food {
+}
+
+.food.information .main-food, .food.information .satellite-food {
+}
+
+.food.presentation .main-food {
+    /*border-radius: 90pt;*/
+    /*transition-delay: 0.8s;*/
+    /*width: 180pt;
+    height: 180pt;
+    margin-left: -90pt;
+    margin-top: -90pt;*/
+}
+
+
+
+.food.information .main-food {
+    /*left: calc(50% - 140pt);*/
+    transition-delay: 0.8s;
+}
+
+.food.information .satellite-food {
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+
+.information-container {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    /*background-color: red;*/
+    color: white;
+    padding: 20pt;
+    transition: all 0.6s ease-out;
+    transform-style: preserve-3d;
+}
+
+    .information-container .btn.btn-lg {
+        margin-top: 20pt;
+    }
+
+.information-content .ingridient-description {
+}
+
+.information-container {
+    opacity: 0;
+    /*transition-delay: 1s;*/
+}
+
+    .information-container.information {
+        opacity: 1;
+        /*transition-delay: 0s;*/
+    }
+
+.information-content {
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 300;
+}
+
+    .information-content h1 {
+        font-weight: 700;
+        margin-bottom: 20pt;
+        white-space: pre-wrap;
+    }
+
+    .information-content .visual-information {
+        margin-bottom: 20pt;
+    }
+
+.micons {
+    width: 24pt;
+    height: 24pt;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    .micons.time {
+        background-image: url(/assets/icons/time_icon.svg);
+    }
+
+    .micons.steps {
+        background-image: url(/assets/icons/steps_icon.svg);
+    }
+
+    .micons.difficulty {
+        background-image: url(/assets/icons/difficulty_icon.svg);
+    }
+
+    .micons.portions {
+        background-image: url(/assets/icons/portions_icon.svg);
+    }
+
+
+
+.food-bar {
+    font-size: 14pt;
+    line-height: 24pt;
+}
+
+.ingridient-title {
+    font-size: 14pt;
+}
+
+.food-bar span {
+    vertical-align: middle;
+}
+
+.super-slogan {
+    margin: 10pt;
+    font-weight: bold;
+    color: #fff;
+    font-size: 140px;
+    line-height: 100pt;
+    position: fixed;
+    /*transform-style: preserve-3d;*/
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+    .super-slogan.information {
+        opacity: 0;
+    }
+
+    .super-slogan.presentation {
+    transition-delay: 1.5s;
+}
+
+.slogans .slogan {
+    margin: 10pt;
+    font-weight: bold;
+    color: #fff;
+    /*font-size: 140px;
+    line-height: 100pt;*/
+    font-size: 30px;
+    line-height: 22pt;
+    position: fixed;
+    transform-style: preserve-3d;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+.slogans.presentation .slogan {
+    transition-delay: 1.5s;
+}
+
+.slogans.information .slogan {
+    opacity: 0;
+}
+
+.slogans .slogan.slogan1 {
+    top: 30%;
+    left: 25%;
+}
+
+.slogans .slogan.slogan2 {
+    top: 30%;
+    left: 60%;
+}
+
+.slogans .slogan.slogan3 {
+    top: 60%;
+    left: 23%;
+}
+
+.slogans .slogan.slogan4 {
+    top: 60%;
+    left: 60%;
+}

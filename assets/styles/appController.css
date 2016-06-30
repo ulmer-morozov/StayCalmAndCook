@@ -1,0 +1,222 @@
+﻿/*navbar*/
+
+.main-menu {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    padding: 20pt;
+    font-size: 12pt;
+    color: #777;
+    z-index: 10000;
+}
+
+    .main-menu a {
+        color: #777;
+        text-decoration: none;
+    }
+
+        .main-menu a:hover {
+            color: #777;
+            text-decoration: none;
+            border-bottom: 1pt solid #777;
+            cursor: pointer;
+        }
+
+    .main-menu .logo {
+        /*font-weight: 300;*/
+        display: inline-block;
+    }
+
+
+/*About*/
+
+.teambg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29,29,32,0.95);
+    z-index: 10000;
+}
+
+    .teambg.ng-enter {
+        -webkit-animation: fadeIn 0.6s;
+        -moz-animation: fadeIn 0.6s;
+        -ms-animation: fadeIn 0.6s;
+        animation: fadeIn 0.6s;
+    }
+
+    .teambg.ng-leave {
+        -webkit-animation: fadeOut 0.6s;
+        -moz-animation: fadeOut 0.6s;
+        -ms-animation: fadeOut 0.6s;
+        animation: fadeOut 0.6s;
+    }
+
+.team {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    z-index: 10001;
+}
+
+    .team.ng-enter {
+        -webkit-animation: rotateInDownRight 0.6s;
+        -moz-animation: rotateInDownRight 0.6s;
+        -ms-animation: rotateInDownRight 0.6s;
+        animation: rotateInDownRight 0.6s;
+    }
+
+    .team.ng-leave {
+        -webkit-animation: rotateOutUpRight 0.6s;
+        -moz-animation: rotateOutUpRight 0.6s;
+        -ms-animation: rotateOutUpRight 0.6s;
+        animation: rotateOutUpRight 0.6s;
+    }
+
+    .team.vertical {
+        flex-direction: column;
+    }
+
+    .team .btn.close-about {
+        top: 20pt;
+        right: 20pt;
+        position: fixed;
+    }
+
+    .team .member-wrapper {
+        display: inline-block;
+        margin: 10pt;
+    }
+
+        .team .member-wrapper .shape {
+            padding: 4pt;
+            border: 1pt solid white;
+            display: inline-block;
+        }
+
+            .team .member-wrapper .shape.circle {
+                border-radius: 50%;
+            }
+
+                .team .member-wrapper .shape.circle .member {
+                    border-radius: 100pt;
+                }
+
+            .team .member-wrapper .shape.rhombus {
+                transform: rotate(-45deg) scale(0.75);
+                -webkit-transform: rotate(-45deg) scale(0.75);
+                padding: 7pt;
+            }
+
+        .team .member-wrapper .member {
+            width: 140pt;
+            height: 140pt;
+            background-size: cover;
+            border: 1pt solid white;
+        }
+
+        .team .member-wrapper .shape .member.valeria {
+            background-image: url("/Images/team/valeria.jpg");
+        }
+
+        .team .member-wrapper .shape .member.mitya {
+            background-image: url("/Images/team/mitya.jpg");
+        }
+
+        .team .member-wrapper .info {
+            width: 140pt;
+            text-align: center;
+            color: white;
+            font-weight: 300;
+            margin: 10pt;
+            /*display: inline-block;*/
+        }
+
+            .team .member-wrapper .info .name {
+                display: inline-block;
+                font-size: 20pt;
+                border-bottom: solid white 1pt;
+                padding-bottom: 5pt;
+                margin-bottom: 20pt;
+            }
+
+            .team .member-wrapper .info .responsibility {
+                font-size: 10pt;
+                padding-bottom: 10pt;
+            }
+
+            .team .member-wrapper .info .link {
+            }
+
+                .team .member-wrapper .info .link a {
+                    text-decoration: none;
+                    color: gray;
+                    padding-bottom: 1pt;
+                    border-bottom: solid gray 1pt;
+                }
+
+                    .team .member-wrapper .info .link a:hover {
+                        color: white;
+                        border-color: white;
+                    }
+
+
+.main-frame.ng-enter {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.main-frame.ng-leave {
+    -webkit-animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+    -ms-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+
+
+.completeControllerPage .final-header {
+    font-size: 140pt;
+    line-height: 130pt;
+    font-weight: bold;
+    margin-bottom: 40pt;
+    text-transform: uppercase;
+}
+
+.sub-final-header {
+    font-size: 20pt;
+    margin-bottom: 30pt;
+}
+
+.completeControllerPage .complete-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}

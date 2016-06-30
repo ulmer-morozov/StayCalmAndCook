@@ -1,0 +1,284 @@
+﻿.cookControllerPage {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    display: -webkit-flex;
+    color: white;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+@media (min-width:1200px) and (max-width:1600px) {
+    .cookControllerPage {
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width:1600px) {
+    .cookControllerPage {
+        transform: scale(1.5);
+    }
+}
+
+
+/*Timeline*/
+
+.cookControllerPage .timeline {
+    position: relative;
+    margin-top: 16pt;
+    /*margin-left: 50%;*/
+    /*text-align: center;*/
+}
+
+    .cookControllerPage .timeline .sequences-container {
+        padding-top: 4pt;
+        padding-bottom: 0pt;
+        width: 666pt;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: hidden;
+        white-space: nowrap;
+        border-left: 1pt solid gray;
+        border-right: 1pt solid gray;
+    }
+
+
+    .cookControllerPage .timeline .timeline-origin {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        border-left: 1pt solid white;
+    }
+
+    .cookControllerPage .timeline .sequences {
+        display: inline-block;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+
+.cookControllerPage .sequences .sequence {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+    .cookControllerPage .sequences .sequence .task {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        display: inline-block;
+        /*margin-right: 2pt;*/
+    }
+
+        .cookControllerPage .sequences .sequence .task .task-label {
+            position: absolute;
+            /*border: 4pt solid green;*/
+            /*width: 100%;
+            line-height: 16pt;
+            padding: 3pt;*/
+        }
+
+
+
+        .cookControllerPage .sequences .sequence .task .step {
+            height: 10pt;
+            color: #fff;
+            text-align: center;
+            border: 1pt solid;
+            margin-right: 2pt;
+            display: inline-block;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            border-color: #b32d3a;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+            .cookControllerPage .sequences .sequence .task .step.active {
+                /*border-color: gray;*/
+                /*border-color: #e33a1b;
+                    border-color: #e25819;*/
+                background-color: #b32d3a;
+            }
+
+            .cookControllerPage .sequences .sequence .task .step.waited {
+                /*border-color: gray;*/
+                /*border-color: #e33a1b;
+                    border-color: #e25819;*/
+                /*border-color: #777777;
+                    background-color: #777777;*/
+            }
+
+            .cookControllerPage .sequences .sequence .task .step.step1 {
+                border-color: gray;
+            }
+
+/*Main*/
+
+.cookControllerPage .main-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: stretch;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+}
+
+.cookControllerPage .player {
+    /*background-image: url(/assets/videos/boiling.gif);*/
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 484pt;
+    height: 342pt;
+}
+
+.cookControllerPage .cook-progress .step .progress-icon {
+    width: 18pt;
+    height: 18pt;
+    display: inline-block;
+    position: relative;
+    top: -18pt;
+    left: 18pt;
+    line-height: 18pt;
+    border-radius: 9pt;
+    text-align: center;
+    border: 1pt solid white;
+}
+
+.cookControllerPage .controls {
+    border: 1pt solid #b32d3a;
+    width: 162pt;
+    padding: 16pt;
+    margin-left: 20pt;
+    /*width: 100%;*/
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    align-items: stretch;
+    -webkit-align-items: stretch;
+    align-content: stretch;
+    -webkit-align-content: stretch;
+}
+
+    .cookControllerPage .controls .btn.player-btn {
+        color: white;
+        /*padding: 6pt;*/
+        font-weight: 700;
+        width: 38pt;
+        height: 38pt;
+        border: none;
+        border-radius: 0;
+        margin: 1pt;
+        font-size: 12pt;
+        line-height: 29pt;
+        border: 1pt solid white;
+    }
+
+        .cookControllerPage .controls .btn.player-btn.back {
+            background-image: url(/assets/icons/icon_back.svg);
+        }
+
+        .cookControllerPage .controls .btn.player-btn.repeat {
+            background-image: url(/assets/icons/icon_repeat.svg);
+        }
+
+        .cookControllerPage .controls .btn.player-btn.next {
+            background-image: url(/assets/icons/icon_next.svg);
+        }
+
+/*Information*/
+
+.cookControllerPage .information h1 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 16pt;
+}
+
+    .cookControllerPage .information h1 .previous, .cookControllerPage .information h1 .next {
+        color: darkgray;
+        font-size: 70%;
+    }
+
+    .cookControllerPage .information h1 .previous {
+        margin-right: 20pt;
+    }
+
+    .cookControllerPage .information h1 .next {
+        margin-left: 20pt;
+    }
+
+.cookControllerPage .controls .currentSequences {
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.step-time-out {
+    text-align: center;
+    font-size: 27pt;
+    font-weight: 300;
+    padding: 5pt;
+}
+
+.cookControllerPage .controls .task-title {
+    font-size: 22pt;
+    padding-bottom: 16pt;
+}
+
+.cookControllerPage .controls .currentSequences .sequence {
+    padding-top: 8pt;
+    padding-bottom: 16pt;
+}
+
+    .cookControllerPage .controls .currentSequences .sequence .bar {
+        width: 50pt;
+        height: 8pt;
+        display: inline-block;
+        background-color: #777777;
+    }
+
+    .cookControllerPage .controls .currentSequences .sequence .title {
+        font-size: 12pt;
+        color: white;
+        /*font-weight: 300;*/
+    }
+
+    .cookControllerPage .controls .currentSequences .sequence .time {
+        display: block;
+        padding-top: 1pt;
+        padding-bottom: 10pt;
+        font-size: 12pt;
+    }
+
+    .cookControllerPage .controls .currentSequences .sequence .information {
+        display: block;
+        padding-top: 10pt;
+        padding-bottom: 10pt;
+    }
+
+    .cookControllerPage .controls .currentSequences .sequence.main .bar {
+        background-color: #b32d3a;
+    }
+
+    .cookControllerPage .controls .currentSequences .sequence.main .title {
+        color: white;
+        font-weight: bold;
+    }
+
+
+.cookControllerPage .progress-text {
+}

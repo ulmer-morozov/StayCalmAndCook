@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>Stay Calm And Cook!</title>
+
+    <link rel="stylesheet" href="Content/animate.css" type='text/css' />
+    <link rel="stylesheet" href="Content/bootstrap.css" type='text/css' />
+    <link rel="stylesheet" href="Content/site.css" type='text/css' />
+
+    <!-- Приложение -->
+    <link rel="stylesheet" href="assets/styles/foodController.css" type='text/css' />
+    <link rel="stylesheet" href="assets/styles/cookController.css" type='text/css' />
+    <link rel="stylesheet" href="assets/styles/appController.css" type='text/css' />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic'
+        rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <div ng-app="app" ng-controller="AppController" ng-cloak>
+
+        <div class="main-menu">
+            <div class="logo">
+                <span><img src="/assets/icons/logo.svg" style="margin-top: -4pt; margin-right: 4pt;" alt="STAY CALM AND COOK LOGO" /> STAY CALM AND COOK</span>
+            </div>
+            <a ng-click="showAbout()" class="pull-right noselect">О проекте</a>
+        </div>
+
+
+        <div ng-view class="main-frame"></div>
+
+        <div ng-if="aboutIsShown" class="teambg"></div>
+        <div ng-if="aboutIsShown" class="team">
+
+            <a ng-click="hideAbout()" class="btn btn-default btn-lg close-about">Закрыть</a>
+
+            <div class="member-wrapper">
+                <div class="shape circle">
+                    <div class="member valeria"></div>
+                </div>
+                <div class="info">
+                    <div class="name">Лера</div>
+                    <div class="responsibility">Спроектировала дизайн, создала и обработала видео</div>
+                    <div class="link">
+                        <a href="https://www.facebook.com/valeriya.rokhlina">valeriya.rokhlina</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-wrapper rhombus">
+                <div class="shape rhombus">
+                    <div class="member mitya"></div>
+                </div>
+                <div class="info">
+                    <div class="name">Митя</div>
+                    <div class="responsibility">Придумал концепцию, закодил сайт</div>
+                    <div class="link">
+                        <a href="https://www.facebook.com/dmitry.ulmermorozov">dmitry.ulmermorozov</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Системные библиотеки -->
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-touch.min.js"></script>
+    <script src="Scripts/angular-debounce.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/imagesLoaded.js"></script>
+    <!-- Модели -->
+    <script src="assets/models/Sequence.js"></script>
+    <!-- Контроллеры -->
+    <script src="assets/controllers/AppController.js"></script>
+    <script src="assets/controllers/FoodController.js"></script>
+    <script src="assets/controllers/CookController.js"></script>
+    <script src="assets/controllers/CompleteController.js"></script>
+    <!-- Приложение -->
+    <script src="assets/Application.js"></script>
+</body>
+
+</html>

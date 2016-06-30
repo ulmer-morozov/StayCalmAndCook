@@ -1,0 +1,62 @@
+﻿<div class="cookControllerPage">
+
+    <div class="main-content" ng-show="isLoaded">
+        <div class="player" ng-style="{'background-image': getVideoUrl(currentStep)}"></div>
+        <div class="controls">
+            <div class="task-title">{{currentStep.task.title}}</div>
+
+            <div class="currentSequences">
+                <div class="sequence main">
+                    <div class="bar"></div>
+                    <div class="time" ng-show="nextStep">{{formatLikeTimeSpan(nextStep.startTime - currentTime)}}</div>
+                    <div class="time" ng-show="!nextStep">{{formatLikeTimeSpan(currentStep.endTime - currentTime)}}</div>
+                    <div class="title">{{currentStep.action}}</div>
+                    <div class="information">{{currentStep.information}}</div>
+                </div>
+
+                <!--<div class="sequence">
+                    <div class="bar"></div>
+                    <div class="time">12:43</div>
+                    <div class="title">{{nextStep.action}}</div>
+                </div>-->
+            </div>
+
+            <div>
+                <a ng-click="prev()" class="btn player-btn back"></a>
+                <a ng-click="repeat()" class="btn player-btn repeat"></a>
+                <a ng-click="next()" class="btn player-btn next"></a>
+            </div>
+        </div>
+    </div>
+
+    <!--TimeLine-->
+    <div class="timeline" ng-show="isLoaded">
+        <!--Sequences-->
+        <div class="sequences-container">
+            <div class="sequences">
+                <div ng-repeat="sequence in sequences" ng-style="{'margin-left': k*sequence.startTime+'pt'}" class="sequence">
+                    <!--||<span>{{sequence.startTime}} - {{sequence.endTime}}</span>-->
+                    <span ng-repeat="task in sequence.tasks" class="task">
+                        <span ng-repeat="step in task.steps" ng-style="{ width: (k*step.duration - 2)+'pt' }" ng-class="{active: step == currentStep, waited: step == nextStep}" class="step">
+                            <!--{{step.action}}-->
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--vertical mark-->
+        <div class="timeline-origin"></div>
+
+    </div>
+
+    <div ng-hide="isLoaded" class="progress-text">Загрузка: {{progress}}...</div>
+
+    <div images-loaded use-progress-events="yes" style="display:none">
+        <div ng-repeat="task in algorithm.tasks">
+            <div ng-repeat="step in task.steps">
+                <img ng-src="/assets/videos/{{step.video}}">
+            </div>
+        </div>
+    </div>
+
+</div>

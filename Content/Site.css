@@ -1,0 +1,88 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+body {
+    background-color: #1c1d20;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-default {
+    background-color: #0d0d0d;
+    border-color: #666666;
+}
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+        color: #555555;
+        background-color: transparent;
+    }
+
+.btn-default {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    font-weight: 300;
+    border-radius: 0;
+    transition: all 0.6s ease-out;
+}
+
+    .btn-default:hover {
+        background-color: transparent;
+        border-color: #b32d3a;
+        color: white;
+    }
+
+    .btn-default:active {
+        background-color: #b32d3a;
+        border-color: white;
+        color: white;
+    }
+
+
+    
+/*::-webkit-scrollbar {
+    width: 4pt;
+    height: 4pt;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+    background-color: gray;
+}*/
+
+
+nav.navbar.navbar-default.transparent {
+    /*background-color: transparent;
+    border: none;*/
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
