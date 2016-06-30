@@ -188,14 +188,14 @@ var Foodstrap;
             this.getVideoUrlHandler = function (step) {
                 if (step == undefined)
                     return;
-                var url = 'url(/assets/videos/' + step.video + ')';
+                var url = 'url(assets/videos/' + step.video + ')';
                 return url;
             };
             this.currentStepChange = function (step) {
                 if (step == undefined) {
                     return;
                 }
-                var audio = new Audio("/assets/audio/" + step.audio);
+                var audio = new Audio("assets/audio/" + step.audio);
                 _this.audioTheme.volume = 0.7;
                 audio.play();
                 audio.onended = function () {
@@ -366,7 +366,7 @@ var Foodstrap;
                 return maxStartTime;
             }
             function stardPlayAudioTheme() {
-                ctrl.audioTheme = new Audio("/assets/audio/LondonMix.mp3");
+                ctrl.audioTheme = new Audio("assets/audio/LondonMix.mp3");
                 ctrl.audioTheme.loop = true;
                 ctrl.audioTheme.play();
             }

@@ -164,7 +164,7 @@
 
             function getMinStartTime(objects) {
                 var minStartTime = Number.MAX_VALUE;
-                angular.forEach(objects, function (object) {
+                angular.forEach(objects, function(object) {
                     if (object == undefined) {
                         return;
                     }
@@ -177,7 +177,7 @@
 
             function getMaxStartTime(objects) {
                 var maxStartTime = 0;
-                angular.forEach(objects, function (obj) {
+                angular.forEach(objects, function(obj) {
                     if (obj == undefined) {
                         return;
                     }
@@ -189,7 +189,7 @@
             }
 
             function stardPlayAudioTheme() {
-                ctrl.audioTheme = new Audio("/assets/audio/LondonMix.mp3");
+                ctrl.audioTheme = new Audio("assets/audio/LondonMix.mp3");
                 ctrl.audioTheme.loop = true;
                 ctrl.audioTheme.play();
             }
@@ -218,12 +218,12 @@
                     $scope.$watch("offset", ctrl.offsetChangeHandler);
                     $scope.$watch("currentTime", ctrl.currentTimeChangeHandler);
                     $scope.$watch("currentStep", $debounce(ctrl.currentStepChange, 3000, true));
-                });//tmp               
+                });//tmp
             }
 
             //Инициализируем
 
-            $scope.$on('PROGRESS', function ($event, progress) {
+            $scope.$on('PROGRESS', function($event, progress) {
                 console.log(progress);
                 $event.stopPropagation();
                 switch (progress.status) {
@@ -244,7 +244,7 @@
                 }
             });
 
-            $scope.$on('SUCCESS', function () {
+            $scope.$on('SUCCESS', function() {
                 console.log('ALL LOADED');
             });
 
@@ -256,7 +256,7 @@
             this.$location.search("offset", newOffsetValue);
         }
 
-        currentTimeChangeHandler = (newCurrentTimeValue: number): void=> {
+        currentTimeChangeHandler = (newCurrentTimeValue: number): void => {
             var timelineElement = angular.element(".sequences-container");
             var normalizedScroll = newCurrentTimeValue / this.$scope.totalTime;
             var maxScroll = angular.element(".sequences").width();
@@ -301,7 +301,7 @@
             this.$scope.offset = currentOffset;
         }
 
-        calculateTimings = (): void=> {
+        calculateTimings = (): void => {
             var tasks = this.$scope.algorithm.tasks;
             for (var i = 0; i < tasks.length; i++) {
                 var totalMinutes = 0;
@@ -345,7 +345,7 @@
             this.$scope.sequences = sequences;
         }
 
-        startMetronom = (): void=> {
+        startMetronom = (): void => {
             var intervalDuration = 1000;
             this.$interval(this.updateCurrentTime, intervalDuration);
         }
@@ -355,7 +355,7 @@
             return totalMiliseconds;
         }
 
-        updateCurrentTime = (): void=> {
+        updateCurrentTime = (): void => {
             var relativeTime = new Date().getTime() - this.$scope.cookStartTime;
             var time = relativeTime + this.$scope.offset;
             if (time >= this.$scope.totalTime) {
@@ -460,7 +460,7 @@
             if (step == undefined)
                 return;
             //
-            var url = 'url(/assets/videos/' + step.video + ')';
+            var url = 'url(assets/videos/' + step.video + ')';
             return url;
         }
 
@@ -469,7 +469,7 @@
                 return;
             }
 
-            var audio = new Audio(`/assets/audio/${step.audio}`);
+            var audio = new Audio(`assets/audio/${step.audio}`);
             this.audioTheme.volume = 0.7;
             audio.play();
             audio.onended = () => {
@@ -478,7 +478,7 @@
             console.log(`play audio ${step.audio}`);
         }
 
-        completeActionHandler = (): void=> {
+        completeActionHandler = (): void => {
             this.$scope.isCompleted = true;
             this.$location.path("/Complete");
         }
