@@ -21,15 +21,15 @@ var Foodstrap;
                     portions: 4
                 },
                 ingridients: [
-                    { title: "Лисички", fullTitle: "Лисички\n (или другие грибы)", weight: 300, icon: "/Images/chanterelles.png", description: "Лучше всего подойдут свежие грибы, можно взять сушенные или замороженные." },
-                    { title: "Картофель", fullTitle: "Картофель", weight: 400, icon: "/Images/potato.png", description: "Свежий картофель отлично подойдет по вкусу грибов к грибам" },
-                    { title: "Морковь", fullTitle: "Морковь", weight: 150, icon: "/Images/carrot.png", description: "Лучший источник бета-картина, сгрядки или из магазина!" },
-                    { title: "Репчатый лук", fullTitle: "Репчатый лук", weight: 50, icon: "/Images/onion.png", description: "Немного лука никогда не повредит" },
-                    { title: "Вода", fullTitle: "Вода", volume: 1.5, icon: "/Images/water.png", description: "Чистая артезианская вода оказывает омолаживающий эффект" },
-                    { title: "Соль", fullTitle: "Соль", amount: 1, icon: "/Images/salt.png", description: "Можно добавить по желанию" },
-                    { title: "Рис", fullTitle: "Рис", amount: 2, icon: "/Images/rice.png", description: "Подойдет как круглозерный, так и длиннозерный рис." },
-                    { title: "Петрушка", fullTitle: "Сушёная зелень петрушки", amount: 1, icon: "/Images/parsley.png", description: "По желанию можно добавить другой зелени" },
-                    { title: "Масло", fullTitle: "Растительное масло", amount: 2, icon: "/Images/oil.png", description: "Подсолнечное, оливковое или льняное" }
+                    { title: "Лисички", fullTitle: "Лисички\n (или другие грибы)", weight: 300, icon: "Images/chanterelles.png", description: "Лучше всего подойдут свежие грибы, можно взять сушенные или замороженные." },
+                    { title: "Картофель", fullTitle: "Картофель", weight: 400, icon: "Images/potato.png", description: "Свежий картофель отлично подойдет по вкусу грибов к грибам" },
+                    { title: "Морковь", fullTitle: "Морковь", weight: 150, icon: "Images/carrot.png", description: "Лучший источник бета-картина, сгрядки или из магазина!" },
+                    { title: "Репчатый лук", fullTitle: "Репчатый лук", weight: 50, icon: "Images/onion.png", description: "Немного лука никогда не повредит" },
+                    { title: "Вода", fullTitle: "Вода", volume: 1.5, icon: "Images/water.png", description: "Чистая артезианская вода оказывает омолаживающий эффект" },
+                    { title: "Соль", fullTitle: "Соль", amount: 1, icon: "Images/salt.png", description: "Можно добавить по желанию" },
+                    { title: "Рис", fullTitle: "Рис", amount: 2, icon: "Images/rice.png", description: "Подойдет как круглозерный, так и длиннозерный рис." },
+                    { title: "Петрушка", fullTitle: "Сушёная зелень петрушки", amount: 1, icon: "Images/parsley.png", description: "По желанию можно добавить другой зелени" },
+                    { title: "Масло", fullTitle: "Растительное масло", amount: 2, icon: "Images/oil.png", description: "Подсолнечное, оливковое или льняное" }
                 ]
             };
             function updateStyle(ingridient) {
