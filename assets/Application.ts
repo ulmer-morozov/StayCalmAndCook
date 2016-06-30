@@ -20,16 +20,16 @@
                 //configure route
                 $routeProvider
                     .when("/Start", {
-                        templateUrl: "/assets/templates/foodControllerTemplate.html",
+                        templateUrl: "assets/templates/foodControllerTemplate.html",
                         controller: "FoodController"
                     })
                     .when("/Cook", {
-                        templateUrl: "/assets/templates/cookControllerTemplate.html",
+                        templateUrl: "assets/templates/cookControllerTemplate.html",
                         controller: "CookController",
                         reloadOnSearch: false
                     })
                     .when("/Complete", {
-                        templateUrl: "/assets/templates/completeControllerTemplate.html",
+                        templateUrl: "assets/templates/completeControllerTemplate.html",
                         controller: "CompleteController"
                     })
                     .otherwise("/Start");
