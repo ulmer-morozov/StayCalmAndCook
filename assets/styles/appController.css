@@ -127,11 +127,11 @@
         }
 
         .team .member-wrapper .shape .member.valeria {
-            background-image: url("/Images/team/valeria.jpg");
+            background-image: url("Images/team/valeria.jpg");
         }
 
         .team .member-wrapper .shape .member.mitya {
-            background-image: url("/Images/team/mitya.jpg");
+            background-image: url("Images/team/mitya.jpg");
         }
 
         .team .member-wrapper .info {

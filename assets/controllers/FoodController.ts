@@ -54,7 +54,7 @@
             }
 
             //watch state
-            $scope.$watch("state", function (newState) {
+            $scope.$watch("state", function(newState) {
                 var ingridient, i;
                 var step = 360 / $scope.product.ingridients.length;
                 switch (newState) {
@@ -88,7 +88,7 @@
                 }
             });
 
-            $scope.toggleState = function () {
+            $scope.toggleState = function() {
                 switch ($scope.state) {
                     case presentation:
                         $scope.state = information;
@@ -99,7 +99,7 @@
                 }
             }
 
-            $scope.selectIngridient = function (ingridient) {
+            $scope.selectIngridient = function(ingridient) {
                 if ($scope.currentIngridient != undefined) {
                     $scope.currentIngridient.active = false;
                 }

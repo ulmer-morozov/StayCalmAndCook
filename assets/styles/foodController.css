@@ -198,19 +198,19 @@
 }
 
     .micons.time {
-        background-image: url(/assets/icons/time_icon.svg);
+        background-image: url(assets/icons/time_icon.svg);
     }
 
     .micons.steps {
-        background-image: url(/assets/icons/steps_icon.svg);
+        background-image: url(assets/icons/steps_icon.svg);
     }
 
     .micons.difficulty {
-        background-image: url(/assets/icons/difficulty_icon.svg);
+        background-image: url(assets/icons/difficulty_icon.svg);
     }
 
     .micons.portions {
-        background-image: url(/assets/icons/portions_icon.svg);
+        background-image: url(assets/icons/portions_icon.svg);
     }
 
 
